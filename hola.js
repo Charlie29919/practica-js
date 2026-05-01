@@ -189,7 +189,6 @@ function encontrarMayor(temperaturas) {
 encontrarMayor(temperaturas);
 
 ------------------------------------------------------------------------
-*/
 
 let numeros = [4, 7, 12, 9, 20];
 Pares = 0
@@ -203,3 +202,131 @@ for(i = 0; i < numeros.length; i++){
 }
 console.log("Son pares: " + Pares)
 console.log("Son impares: " + Impares)
+
+------------------------------------------------------------------------
+
+Creá una función que reciba una lista de 5 precios y muestre si cada uno es Caro (más de 50,000), Normal (entre 10,000 y 50,000) o Barato (menos de 10,000).
+Los precios son:
+let precios = [5000, 75000, 25000, 120000, 8000];
+
+
+let precios = [5000, 75000, 25000, 120000, 8000]
+
+function listaprecios(precios){
+    for(i = 0; i < precios.length; i++){
+        if(precios[i] >= 50000){
+            console.log(precios[i] + " Es caro")
+        }else if(precios[i] > 10000){
+            console.log(precios[i] + " Es normal")
+        }else{
+            console.log(precios[i] + " Es bajo")
+        }
+    }
+}
+listaprecios(precios)
+
+---------------------------------------------------------------------------
+
+Creá una función que reciba una lista de nombres y salude a cada uno, pero si el nombre es "Carlos" que diga "Hola jefe!" en lugar del saludo normal:
+let nombres = ["Ana", "Carlos", "Luis", "María", "Carlos"];
+
+
+let nombres = ["Ana", "Carlos", "Luis", "Maria", "Carlos"];
+
+function saludar(nombres){
+    for(i = 0; i < nombres.length; i++){
+        if(nombres[i] === "Carlos"){
+            console.log("Hola jefe")
+        }else{
+            console.log("Saludos " + nombres[i])
+        }
+    }
+}
+saludar(nombres)
+
+---------------------------------------------------------------------
+
+Creá una función que reciba una lista de 5 edades y clasifique a cada persona como:
+
+Niño (menos de 12)
+Adolescente (entre 12 y 17)
+Adulto (18 o más)
+
+let edades = [8, 15, 25, 11, 19];
+
+
+
+let edades = [8, 15, 25, 11, 19];
+
+function MostrarEdades(edades){
+for(i = 0; i < edades.length; i++){
+    if(edades[i] >= 18){
+        console.log("Adulto")
+    }else if(edades[i] >= 12){
+        console.log("Adolescente")
+    }else{
+        console.log("Niño")
+    }
+}
+}
+MostrarEdades(edades)
+
+---------------------------------------------------------------------------
+Creá una función que reciba una lista de 5 nombres y sus edades, y muestre solo los que son mayores de edad (18 o más):
+let nombres = ["Ana", "Carlo", "Luis", "María", "Pedro"];
+let edades = [15, 20, 17, 25, 16];
+
+let nombres = ["Ana", "Carlos", "Luis", "Maria", "Pedro"]
+let edades = [15, 20, 17, 25, 16]
+
+function MostrarMayores(nombres, edades){
+    for(i = 0; i < edades.length; i++){
+        if(edades[i] >= 18){
+            console.log(nombres[i] + " Es mayor de edad")
+        }
+    }
+}
+
+MostrarMayores(nombres, edades)
+
+---------------------------------------------------------------------------
+
+
+let nombres = ["Ana", "Carlos", "Luis", "Maria", "Pedro"]
+
+i = 0; 
+
+while(i < nombres.length){
+    console.log(nombres[i])
+    i++
+}
+
+
+
+let numeros = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+i = 0;
+
+while(i < numeros.length){
+    console.log(numeros[i])
+    i++
+}
+
+
+let i = 10;
+
+while (i >= 1) {
+    console.log(i);
+    i--;
+}
+
+---------------------------------------------------------------------------
+*/
+
+let pares = 1;
+
+while(pares < 21){
+    if(pares % 2 === 0){
+    console.log(pares)}
+    pares++;
+}
