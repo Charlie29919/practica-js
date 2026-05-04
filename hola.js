@@ -320,8 +320,7 @@ while (i >= 1) {
     i--;
 }
 
----------------------------------------------------------------------------
-*/
+
 
 let pares = 1;
 
@@ -330,3 +329,152 @@ while(pares < 21){
     console.log(pares)}
     pares++;
 }
+
+---------------------------------------------------------------------------
+
+Usando for mostrá los números del 1 al 10, pero si el número es divisible entre 3 mostrá "Fizz" en lugar del número.
+
+
+let impares = 0;
+
+while(impares < 10){
+    if(impares % 3 === 0){
+        console.log("Fizz")
+    }else{
+        console.log(impares)
+    }
+    impares++
+}
+
+---------------------------------------------------------------------------
+
+
+let persona ={
+    nombre: "Carlos",
+    edad: 20,
+    carrera: "Tecnologias de la Informacion",
+    ciudad: "Cartago",
+    universidad: "CUC"
+}
+
+console.log(persona.nombre)
+console.log(persona.edad)
+console.log(persona.carrera)
+console.log(persona.ciudad)
+console.log(persona.universidad)
+
+---------------------------------------------------------------------------
+
+let estudiantes = [
+    { nombre: "Ana", nota: 85 },
+    { nombre: "Carlo", nota: 62 },
+    { nombre: "Luis", nota: 45 }
+];
+
+function Aprobados(estudiantes){
+for(i = 0; i < estudiantes.length; i++){
+    if(estudiantes[i].nota >= 70){
+       // console.log(estudiantes[i].nombre + " Aprobo")
+       console.log(`${estudiantes[i].nombre}   Aprobo`)
+    }else{
+       // console.log(estudiantes[i].nombre + " Reprobo")
+       console.log(`${estudiantes[i].nombre} Reprobo`)
+    }
+}
+}
+Aprobados(estudiantes)
+
+-------------------------------------------------------------------------------
+Creá una lista de 3 productos con sus propiedades y mostrá solo los que están disponibles:
+let productos = [
+    { nombre: "Laptop", precio: 500000, disponible: true },
+    { nombre: "Mouse", precio: 15000, disponible: false },
+    { nombre: "Teclado", precio: 25000, disponible: true }
+];
+
+
+let productos = [
+    {nombre : "Laptop", precio: 500000, disponibles: true},
+    {nombre: "Mouse", precio: 15000, disponibles: false},
+    {nombre: "Teclado", precio: 25000, disponibles: true}
+]
+
+function MostrarPropiedades(productos){
+    for(i = 0; i < productos.length; i++){
+        if(productos[i].disponibles === true){
+            console.log(productos[i].nombre + " Esta disponible solo por: " + productos[i].precio)
+        }else{}
+    }
+}
+
+MostrarPropiedades(productos)
+
+-------------------------------------------------------------------------------
+
+function sumar(a,b) {
+    return a + b;
+}
+
+let resultado = sumar(3,5);
+console.log(resultado);
+
+-------------------------------------------------------------------------------
+Creá una función que reciba dos números y retorne el mayor de los dos.
+
+function Nummayor(a, b){
+    if(a > b){
+        return a
+    }else{
+        return b
+    }
+}
+
+let resultado = Nummayor(18, 9);
+console.log(resultado)
+
+-------------------------------------------------------------------------------
+
+Creá un switch que reciba un número del 1 al 3 y muestre "Oro", "Plata" o "Bronce" según la posición.
+
+
+let posiciones = 2;
+
+switch(posiciones){
+    case 1:
+        console.log("Oro")
+        break;
+
+    case 2:
+        console.log("Plata")
+        break;
+
+    case 3:
+        console.log("Bronce")
+        break;
+
+    default:
+        console.log("Numero erroneo")
+}
+
+-------------------------------------------------------------------------------
+
+
+let persona = {
+    nombre: "Carlos",
+    edad: 20,
+    institucion: "CUC",
+    Carrera: "TI",
+
+    saludar: function() {
+        console.log(`Hola, yo me llamo ${this.nombre}`);
+    }
+};
+
+persona.saludar()
+
+-------------------------------------------------------------------------------
+*/
+
+let mascota = {nombre: "Manchas", edad_perruna: 15};
+
+console.log(`Mi perrito se llama ${mascota.nombre} y tiene ${mascota.edad_perruna} añitos perrunos`);
