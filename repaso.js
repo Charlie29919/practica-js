@@ -1,109 +1,132 @@
-/*
-let persona ={
-    nombre: "Carlos", 
-    edad: 20, 
-    activo: true
+/* //Ejercicio 1:
+Ejercicio 1 — Variables
+Sin ver ejemplos, escribí tres variables:
+
+Una que guarde tu nombre
+Una que guarde tu edad
+Una que guarde si estás activo o no
+
+Y mostralas con console.log. 
+
+---------------------------------------------------------------------
+
+let nombre = "Carlos";
+let edad = 20;
+let activo = true;
+
+console.log(nombre);
+console.log(edad);
+console.log(activo);
+
+---------------------------------------------------------------------
+//Ejercicio 2:
+
+Ejercicio 2 — Condicional
+Creá una variable temperatura con el valor 35 y mostrá en consola:
+
+"Hace calor" si es mayor a 30
+"Temperatura normal" si está entre 15 y 30
+"Hace frío" si es menor a 15
+
+
+let temperatura = 10;
+
+if(temperatura >= 30){
+    console.log("Hace calor")
+}else if(temperatura >= 15){
+        console.log("Temperatura normal")
+}else{
+        console.log("Hace frio")
 }
 
-let persona2 = {
-    nombre: "Maria", 
-    edad: 22, 
-    activo: false,
+---------------------------------------------------------------------
+//Ejercicio 3:
+Escribí una función llamada calcularDescuento que reciba dos parámetros: precio y descuento, 
+y devuelva el precio final después de aplicar el descuento.
+
+
+
+function calcularDescuento(precio, descuento){
+    let total = precio - (precio * descuento / 100)
+    //return `El monto total es de: ${total}`
+    return total
 }
 
-let producto = {
-    nombre: "Carro Need For Speed",
-    precio: 20000,
-    disponible: true,
+console.log(calcularDescuento(20000, 20))
+
+function factura(total, IVA){
+    let montoConIVA = total + (total * IVA / 100)
+        console.log(`Total con IVA: ${montoConIVA}`)
 }
 
-console.log(persona.nombre)
-console.log(persona.edad)
-console.log(persona.activo)
+let resultado = calcularDescuento(20000, 20)
+factura(resultado, 13)
 
-console.log(persona2.nombre)
-console.log(persona2.edad)
-console.log(persona2.activo)
+---------------------------------------------------------------------
+//Ejercicio 4:
 
-console.log(producto)
-console.log(producto.nombre)
-console.log(producto.precio)
-console.log(producto.disponible)
+Un array llamado estudiantes con 4 nombres, y recorrélo con un for que imprima cada nombre.
 
-function MostrarProducto(producto){
-    console.log(`Producto: ${producto.nombre}`)
-    console.log(`Precio: ${producto.precio}`)
-    console.log(`Disponible: ${producto.disponible}`)
+
+let estudiantes = ["Carlos", "Ana", "Sebastian", "Charlote"]
+
+for(let i = 0; i < estudiantes.length; i++){
+    console.log(estudiantes[i])
 }
 
-MostrarProducto(producto)
+---------------------------------------------------------------------
 
-Creá una función llamada calcularPromedio que reciba un array de 5 números, los sume todos con un for, y devuelva el promedio.
-Ejemplo de cómo llamarla:
-let notas = [80, 90, 75, 60, 95]
-console.log(calcularPromedio(notas))
-Debe imprimir 80.
+//Ejercicio 5:
+
+Escribí un objeto llamado estudiante con estas propiedades: nombre, edad y carrera. Mostrá las tres con console.log.
 
 
-let notas = [80, 90, 75, 60, 95]
-suma = 0;
-SacarPromedio = 0;
+let estudiante = {nombre: "Carlos", edad: 20, carrera: "TI"}
 
-function calcularPromedio(notas){
+console.log(estudiante.nombre, estudiante.edad, estudiante.carrera)
 
-for(let i = 0; i< notas.length; i++){
-    suma += notas[i];
+---------------------------------------------------------------------
+//Ejercicio 6:
+
+Creá un array llamado estudiantes que contenga 3 objetos, cada uno con nombre y nota. Luego recorrélo con un for y mostrá el nombre y la nota de cada uno.
+
+
+let estudiantes = [
+    {nombre: "Carlos", edad: 20, carrera: "TI"},
+    {nombre: "Michael", edad: 21, carrera: "Futbolista"},
+    {nombre: "Maria", edad: 20, carrera: "Biologia"},
+    {nombre: "Enrique", edad: 25, carrera: "Arqueologia"}
+]
+
+for(let i = 0; i < estudiantes.length; i++){
+    console.log(estudiantes[i].nombre, estudiantes[i].edad, estudiantes[i].carrera)
 }
-SacarPromedio = suma / notas.length;
-return SacarPromedio
-}
 
-console.log(calcularPromedio(notas))
+---------------------------------------------------------------------
+//Ejercicio 7:
 
--------------------------------------------------------------
-
-Escribí una función llamada analizarPrecios que reciba ese objeto y muestre en consola:
-Mayor precio: 3200
-Menor precio: 600
-Promedio: 1640
+Escribí una función llamada promedioNotas que reciba un array de objetos, cada uno con nombre y nota, y muestre en consola el nombre de cada estudiante con su nota, y al final el promedio general.
 
 */
 
+let estudiantes = [
+    {nombre: "Carlos", edad: 20, carrera: "TI", materia: "Programación", nota: 90},
+    {nombre: "Michael", edad: 21, carrera: "Futbolista", materia: "Entrenamiento", nota: 88},
+    {nombre: "Maria", edad: 20, carrera: "Biologia", materia: "RHH", nota: 92},
+    {nombre: "Enrique", edad: 25, carrera: "Arqueologia", materia: "Fosiles", nota: 78}
+]
 
-let productos = {
-    producto1: 1500,
-    producto2: 800,
-    producto3: 3200,
-    producto4: 600,
-    producto5: 2100
+function promedioNotas(estudiantes){
+    let totalnotas = 0;
+
+for(let i = 0; i < estudiantes.length; i++){
+    console.log(estudiantes[i].nombre, estudiantes[i].edad, estudiantes[i].carrera, estudiantes[i].materia, estudiantes[i].nota)
+        totalnotas += estudiantes[i].nota;
+
 }
-
-function analizarPrecios(productos){
-    let suma = 0;
-    let Promedio = 0;
-    let Mayor = 0;
-    let Menor = productos.producto1;
-    let cantidad = Object.keys(productos).length
-
-
-    for(let i in productos){
-        suma += productos[i]          // acumular la suma
-
-        Promedio = suma / cantidad;
-    if(productos[i] > Mayor){     // encontrar el mayor
-        Mayor = productos[i]
-}
-    if(productos[i] < Menor){
-        Menor = productos[i]
-    }
-    }
-    
-    console.log(`Mayor precio: ${Mayor}`)
-    console.log(`Menor precio: ${Menor}`)
-    console.log(`Promedio: ${Promedio}`)
+    let promedio = totalnotas / estudiantes.length
+    console.log(promedio)
 
 }
 
-analizarPrecios(productos)
-
-console.log("Esto lo escribí en rama-practica")
+promedioNotas(estudiantes)
